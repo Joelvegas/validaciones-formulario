@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de un formulario</title>
+</head>
+<body>
+    <style>
+        * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        }
+
+        body {
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1.5px solid black;
+            border-radius: 10px;
+            width: 600px;
+        }
+
+        h1 {
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+        }
+
+        form div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+        }
+
+        form input {
+            margin: 8px;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .error{
+            border: 2px solid red;
+        }
+    </style>
+
+
+    <main>
+        <h1>Practica de validaciones de un formulario</h1>
+        <form onsubmit={myForm(event)}>
+            <input id="nombre" placeholder="Nombre" type="text">
+            <input id="apellido" placeholder="Apellido" type="text">
+            <input id="edad" placeholder="Edad" type="number">
+            <input id="email" placeholder="Email" type="email">
+            <div>
+                <input type="checkbox">
+                <label for="">Acepto las condiciones</label>
+            </div>
+            <input class="submit" id="" type="submit" value="Enviar">
+
+        </form>
+
+        <div id="formValues"></div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
